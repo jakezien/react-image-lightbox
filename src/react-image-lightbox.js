@@ -127,6 +127,7 @@ class ReactImageLightbox extends Component {
     this.handlePointerEvent = this.handlePointerEvent.bind(this);
     this.handleCaptionMousewheel = this.handleCaptionMousewheel.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
+    this.handleContextMenuOpen = this.handleContextMenuOpen.bind(this);
     this.handleZoomInButtonClick = this.handleZoomInButtonClick.bind(this);
     this.handleZoomOutButtonClick = this.handleZoomOutButtonClick.bind(this);
     this.requestClose = this.requestClose.bind(this);
@@ -815,6 +816,10 @@ class ReactImageLightbox extends Component {
       );
       this.multiPointerEnd(event);
     }
+  }
+
+  handleContextMenuOpen() {
+    this.handleEnd(null);
   }
 
   decideMoveOrSwipe(pointer) {
